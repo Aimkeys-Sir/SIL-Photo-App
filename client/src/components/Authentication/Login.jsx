@@ -10,10 +10,11 @@ function Login ({setUser}){
 
   function handleSubmit(e){
     e.preventDefault();
+    console.log({username, password});
     fetch("/login",{
       method: 'POST',
       headers: {
-        "Content-Type":"applicaion/json",
+        "Content-Type":"application/json",
       },
       body: JSON.stringify({username, password}),
     }).then((r)=>{
